@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useState } from 'react';
+import { GroceryFormList } from './components/GroceryFormList';
 
 export default function Home() {
   const [checked, setChecked] = useState<boolean | 'indeterminate'>(false);
@@ -23,13 +24,7 @@ export default function Home() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Checkbox id='steak' onCheckedChange={(value) => setChecked(value)} />
-          <label
-            htmlFor='steak'
-            className={`ml-2 ${checked ? 'line-through' : ''}`}
-          >
-            Steak
-          </label>
+          <GroceryFormList />
         </CardContent>
       </Card>
     </main>
